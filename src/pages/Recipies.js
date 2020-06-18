@@ -9,19 +9,19 @@ constructor(props)
     super(props)
 }
 state={
-    recipies:recipeData,
+    recipes:recipeData,
     search:''
 }
-handleChange=(e)=>
+handleChange= e =>
 {
     this.setState({
         search:e.target.value
     });
 }
-handleSubmit=(e)=>{
-    e.preventdefault()
-}
-
+handleSubmit = e => {
+    e.preventDefault();
+  };
+  
     render() {
         return (
             <>
@@ -30,7 +30,7 @@ handleSubmit=(e)=>{
              handleSubmit={this.handleSubmit}
              />
              
-            <RecipiesList recipies={this.state.recipies} />
+            <RecipiesList recipes={this.state.recipes} />
             </>
             );
     }
